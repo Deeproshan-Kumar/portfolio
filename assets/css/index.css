@@ -626,6 +626,10 @@ textarea:valid ~ label {
   display: block;
 }
 
+.contact-info {
+  margin-top: 15px;
+}
+
 .contact-info .card {
   min-height: 180px;
   padding: 20px;
