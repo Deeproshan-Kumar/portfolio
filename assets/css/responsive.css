@@ -1,0 +1,158 @@
+@media only screen and (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar {
+    height: 70px;
+  }
+
+  .navbar .brand {
+    padding: 0 10px;
+  }
+
+  .navbar .navigation {
+    position: fixed;
+    top: 0;
+    flex-direction: column;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(
+      135deg,
+      var(--primary),
+      var(--gradient-one),
+      var(--gradient-two),
+      var(--gradient-one)
+    );
+    background-size: 300% 100%;
+    transform: translateY(-100%);
+    transform-origin: bottom;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-duration: 500ms;
+    z-index: 998;
+  }
+
+  .navbar .navigation.active {
+    transform: translateY(0);
+  }
+
+  .navbar .navigation li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 20px;
+  }
+
+  .navbar .navigation li a {
+    font-size: 16px;
+    color: var(--light);
+  }
+
+  .navbar .navigation li.active::before,
+  .navbar .navigation li:hover::before {
+    transform: scaleX(0);
+  }
+
+  li.light-mode {
+    right: 50px;
+  }
+
+  .hero-section {
+    padding-top: 100px;
+  }
+
+  .hero-section .legend {
+    padding-left: 10px;
+  }
+
+  .hero-section .legend h2 {
+    font-size: 26px;
+  }
+
+  .hero-section .banner-info {
+    margin-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+  }
+
+  .hero-section .banner-info .info {
+    max-width: unset;
+  }
+
+  .hero-section .banner-info .info h3 {
+    font-size: 20px;
+  }
+
+  .hero-section .wrapper,
+  .hero-section .banner-info,
+  .edu-and-exp .block .row .thumbnail,
+  .edu-and-exp .block .row .info {
+    width: 100%;
+  }
+
+  .hero-section .wrapper,
+  .hero-section .banner-info {
+    padding: 0;
+  }
+
+  .hero-section .banner-info {
+    margin-top: 20px;
+  }
+
+  .hero-section .scroll {
+    display: none;
+  }
+
+  .accordian .accordian-header .header-contents h4 {
+    font-size: 16px;
+  }
+
+  .edu-and-exp .block {
+    padding: 5px 0 5px 20px;
+  }
+
+  .edu-and-exp h4 {
+    font-size: 16px;
+  }
+
+  .edu-and-exp .block > .row {
+    min-height: unset;
+  }
+
+  .edu-and-exp .block .row .info {
+    margin-left: 0;
+  }
+
+  .contact-form .row {
+    margin-bottom: 0;
+  }
+
+  .contact-form .field {
+    margin-bottom: 15px;
+  }
+
+  .contact-info {
+    margin-top: 20px;
+  }
+
+  .services .card,
+  .projects .row .inner,
+  .contact-info .inner {
+    padding: 0 10px;
+  }
+
+  .contact-form .column-50,
+  .contact-form .column {
+    padding: 0;
+  }
+
+  .contact-info .card {
+    min-height: unset;
+    padding: 15px;
+  }
+
+  .scroll {
+    height: 35px;
+    width: 35px;
+  }
+}
