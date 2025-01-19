@@ -25,39 +25,13 @@ body.light-mode .header.sticky {
 }
 
 .navbar .brand {
-  position: relative;
-  background-image: linear-gradient(
-    to right,
-    var(--primary),
-    var(--gradient-one),
-    var(--gradient-two),
-    var(--gradient-one)
-  );
-  background-size: 300% 100%;
   padding: 0.8rem 1.5rem;
-  z-index: 1;
-}
-
-.navbar .brand::before {
-  content: "";
-  position: absolute;
-  background-color: var(--dark);
-  inset: 0.2rem;
-  z-index: -1;
 }
 
 .navbar .brand h1 {
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
   font-size: 2.8rem;
-  background-image: linear-gradient(
-    to right,
-    var(--primary),
-    var(--gradient-one),
-    var(--gradient-two),
-    var(--gradient-one)
-  );
-  background-size: 300% 100%;
+  color: var(--primary);
+  font-family: "Playwrite IN", serif;
 }
 
 .hamburger {
@@ -76,9 +50,12 @@ body.light-mode .header.sticky {
   height: 0.2rem;
   width: 3rem;
   background: var(--light);
-  margin: 0.4rem 0;
   transition-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
   transition-duration: 300ms;
+}
+
+.hamburger .bars:nth-child(2) {
+  margin: 0.7rem 0;
 }
 
 .hamburger.active .bars:nth-child(2) {
@@ -86,11 +63,11 @@ body.light-mode .header.sticky {
 }
 
 .hamburger.active .bars:nth-child(1) {
-  transform: rotate(45deg) translateY(0.5rem) translateX(0.5rem);
+  transform: rotate(45deg) translateY(0.6rem) translateX(0.6rem);
 }
 
 .hamburger.active .bars:nth-child(3) {
-  transform: rotate(-45deg) translateY(-0.3rem) translateX(0.4rem);
+  transform: rotate(-45deg) translateY(-0.6rem) translateX(0.6rem);
 }
 
 .navbar .navigation {
@@ -155,6 +132,7 @@ body.light-mode li.light-mode {
 
 .progress-bar {
   height: 0.3rem;
+  width: 0;
   background: var(--primary);
 }
 
@@ -276,6 +254,10 @@ body.light-mode li.light-mode {
   font-size: 3.2rem;
   transition: 0.25s all ease-in-out;
   cursor: pointer;
+}
+
+body.light-mode .grid-4x4 .item {
+  background: linear-gradient(45deg, var(--black-smoke), transparent);
 }
 
 .grid-4x4 .item:hover {
@@ -675,7 +657,6 @@ textarea:valid ~ label {
   outline: none;
   font-size: 1.6rem;
   cursor: pointer;
-  font-family: "Poppins", sans-serif;
 }
 
 .spinner.active {

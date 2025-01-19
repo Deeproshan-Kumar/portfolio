@@ -153,10 +153,22 @@
 
   .edu-and-exp h4 {
     font-size: 1.6rem;
+  } 
+
+  .edu-and-exp .block {
+    padding-left: 2.5rem;
+  }
+
+  .edu-and-exp .block > .row {
+    padding: 1.5rem;
   }
 
   .contact-form .field {
     margin-bottom: 1.5rem;
+  }
+
+  .services .card .inner {
+    padding: 2rem;
   }
 
   .contact-info {
