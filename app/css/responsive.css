@@ -1,0 +1,198 @@
+@media only screen and (max-width: 1200px) {
+  .grid-4x4 {
+    grid-template-columns: repeat(4, 10rem);
+    grid-gap: 1.5rem;
+  }
+
+  .grid-4x4 .item {
+    height: 10rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .navbar .navigation li:not(:last-child) {
+    margin-right: 3rem;
+  }
+
+  .grid-4x4 {
+    grid-template-columns: repeat(4, 8rem);
+    grid-gap: 1rem;
+  }
+
+  .grid-4x4 .item {
+    height: 8rem;
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .spacer.lg {
+    min-height: 5rem;
+  }
+
+  .navbar {
+    height: 8rem;
+  }
+
+  .navbar .brand {
+    padding: 0.7rem;
+  }
+
+  .navbar .brand h1 {
+    font-size: 2.4rem;
+  }
+
+  .hero-section .legend h2 {
+    font-size: 2.6rem;
+  }
+
+  .grid-4x4 {
+    grid-template-columns: repeat(4, 7rem);
+  }
+
+  .grid-4x4 .item {
+    height: 7rem;
+    font-size: 2.4rem;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .hamburger {
+    display: block;
+  }
+
+  .navbar {
+    height: 7rem;
+    padding-right: 5rem;
+  }
+
+  .navbar .brand {
+    padding: 0 1rem;
+  }
+
+  .navbar .navigation {
+    position: fixed;
+    top: 0;
+    flex-direction: column;
+    left: 0;
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(
+      135deg,
+      var(--primary),
+      var(--gradient-one),
+      var(--gradient-two),
+      var(--gradient-one)
+    );
+    background-size: 300% 100%;
+    transform: translateY(-100%);
+    transform-origin: bottom;
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transition-duration: 500ms;
+    z-index: 998;
+  }
+
+  .navbar .navigation.active {
+    transform: translateY(0);
+  }
+
+  .navbar .navigation li:not(:last-child) {
+    margin-right: 0;
+    margin-bottom: 2rem;
+  }
+
+  .navbar .navigation li a {
+    font-size: 1.6rem;
+    color: var(--light);
+  }
+
+  .navbar .navigation li.active::before,
+  .navbar .navigation li:hover::before {
+    transform: scaleX(0);
+  }
+
+  li.light-mode {
+    right: 5rem;
+  }
+
+  .hero-section .legend {
+    padding-left: 1rem;
+  }
+
+  .hero-section .legend h2 {
+    font-size: 2.6rem;
+  }
+
+  .hero-section .wrapper,
+  .hero-section .banner-info {
+    width: 100%;
+    padding: 0;
+  }
+
+  .hero-section .banner-info {
+    justify-content: center;
+    margin-top: 5rem;
+  }
+
+  .hero-section .scroll {
+    display: none;
+  }
+
+  .grid-4x4 {
+    grid-template-columns: repeat(4, 6rem);
+  }
+
+  .grid-4x4 .item {
+    height: 6rem;
+    font-size: 2rem;
+  }
+
+  .accordian .accordian-header .header-contents h4 {
+    font-size: 1.6rem;
+  }
+
+  .edu-and-exp h4 {
+    font-size: 1.6rem;
+  }
+
+  .contact-form .field {
+    margin-bottom: 1.5rem;
+  }
+
+  .contact-info {
+    margin-top: 2rem;
+  }
+
+  .contact-info .card h4 {
+    font-size: 2rem;
+  }
+
+  .contact-info .card {
+    padding: 1.5rem;
+  }
+
+  .footer a {
+    justify-content: center;
+  }
+
+  .footer .footer-inner .panel {
+    width: 100%;
+    text-align: center;
+  }
+
+  .scroll {
+    height: 3.5rem;
+    width: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 576px) {
+  .hero-section .legend h2 {
+    font-size: 2rem;
+  }
+
+  .grid-1x2,
+  .projects .grid {
+    grid-template-columns: 1fr;
+  }
+}
