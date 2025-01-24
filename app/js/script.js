@@ -15,11 +15,12 @@ window.addEventListener("scroll", function () {
 let navItems = navigation.querySelectorAll("li.nav-item");
 navItems.forEach((item) => {
   item.addEventListener("click", function () {
-    let active = document.getElementsByClassName("active");
-    active[0].className = active[0].className.replace(" active", "");
-    this.className += " active";
+    let active = document.querySelector(".nav-item.active");
+    if (active) {
+      active.classList.remove("active");
+    }
+    this.classList.add("active");
     navigation.classList.remove("active");
-    scrollToSection(this);
   });
 });
 
@@ -163,26 +164,26 @@ function createSmoke(e) {
 }
 document.addEventListener("mousemove", createSmoke);
 
-let disabledKeys = ['c', 'C', 'I', 'J', 'v', 'u', 'x', 'insert'];
-document.addEventListener('keydown', (e) => {
-  if (
-    (e.ctrlKey && disabledKeys.includes(e.key)) ||
-    (e.shiftKey && disabledKeys.includes(e.key)) ||
-    (e.ctrlKey && e.shiftKey && disabledKeys.includes(e.key)) ||
-    e.key === 'F12'
-  ) {
-    blockedAction(e);
-  }
-});
+// let disabledKeys = ['c', 'C', 'I', 'J', 'v', 'u', 'x', 'insert'];
+// document.addEventListener('keydown', (e) => {
+//   if (
+//     (e.ctrlKey && disabledKeys.includes(e.key)) ||
+//     (e.shiftKey && disabledKeys.includes(e.key)) ||
+//     (e.ctrlKey && e.shiftKey && disabledKeys.includes(e.key)) ||
+//     e.key === 'F12'
+//   ) {
+//     blockedAction(e);
+//   }
+// });
 
-document.addEventListener('paste', (e) => {
-  blockedAction(e);
-});
+// document.addEventListener('paste', (e) => {
+//   blockedAction(e);
+// });
 
-document.addEventListener('copy', (e) => {
-  blockedAction(e);
-});
+// document.addEventListener('copy', (e) => {
+//   blockedAction(e);
+// });
 
-document.addEventListener('contextmenu', (e) => {
-  blockedAction(e);
-});
+// document.addEventListener('contextmenu', (e) => {
+//   blockedAction(e);
+// });

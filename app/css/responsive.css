@@ -42,6 +42,10 @@
 }
 
 @media only screen and (max-width: 991px) {
+  html {
+    scroll-padding: 8rem;
+  }
+
   .app {
     padding-top: 8rem;
   }
@@ -85,6 +89,10 @@
 }
 
 @media only screen and (max-width: 767px) {
+  html {
+    scroll-padding: 6rem;
+  }
+  
   .app {
     padding-top: 6rem;
   }
