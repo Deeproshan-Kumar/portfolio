@@ -92,7 +92,11 @@
   html {
     scroll-padding: 6rem;
   }
-  
+
+  body {
+    font-size: 1.4rem;
+  }
+
   .app {
     padding-top: 6rem;
   }
@@ -198,6 +202,10 @@
     padding: 1.5rem;
   }
 
+  .services .card {
+    min-height: 12rem;
+  }
+
   .grid-1x3 {
     grid-gap: 1rem;
   }
@@ -209,10 +217,6 @@
 
   .contact-form .field {
     margin-bottom: 1.5rem;
-  }
-
-  .services .card .inner {
-    padding: 2rem;
   }
 
   .contact-form .fields {
@@ -251,8 +255,19 @@
 }
 
 @media only screen and (max-width: 576px) {
+  body,
+  .theme-button,
+  .edu-and-exp .block .row .info .row p span:nth-child(2) {
+    font-size: 1.2rem;
+  }
+
   .hero-section .legend h2 {
     font-size: 2rem;
+  }
+
+  .edu-and-exp h4 {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
   }
 
   .grid-1x2,
