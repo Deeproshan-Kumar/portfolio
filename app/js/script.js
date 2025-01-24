@@ -43,7 +43,7 @@ var typed = new Typed("#element", {
   strings: [
     "Software Development Engineer",
     "Front End Developer",
-    "React.js Developer",
+    "React JS Developer",
   ],
   typeSpeed: 100,
   loop: true,
@@ -83,7 +83,6 @@ function removeOpen(index1) {
 
 // Email JS Configs
 (function () {
-  // https://dashboard.emailjs.com/admin/account
   emailjs.init("y7oQUNOfAzJ6sDGyz");
 })();
 
@@ -110,7 +109,7 @@ window.onload = function () {
         Swal.fire("Error", "Please enter a valid mobile number.", "error");
       } else {
         spinner.classList.add("active");
-        emailjs.sendForm("service_cfhb3u7", "template_tpkwaed", this).then(
+        emailjs.sendForm("service_uwt0prp", "template_tpkwaed", this).then(
           function () {
             spinner.classList.remove("active");
             Swal.fire(
@@ -144,22 +143,25 @@ scrollTop.addEventListener("click", function (e) {
   });
 });
 
-// Dark Mode
-let darkMode = document.querySelector("li.light-mode"),
-  body = document.body;
-darkMode.addEventListener("click", function () {
-  body.classList.toggle("light-mode");
-  if (body.classList.contains("light-mode")) {
-    darkMode.innerHTML = `<ion-icon name="contrast-outline"></ion-icon>`;
-  } else {
-    darkMode.innerHTML = `<ion-icon name="moon-outline"></ion-icon>`;
-  }
-});
-
 // Disabling cut, copy, paste and  more...
 let blockedAction = (e) => {
   e.preventDefault();
 };
+
+let cursor = document.querySelector("#cursor");
+function createSmoke(e) {
+  let elem = document.createElement("div");
+  elem.classList.add("elem");
+  elem.style.left = `${e.clientX}px`;
+  elem.style.top = `${e.clientY}px`;
+
+  cursor.appendChild(elem);
+
+  elem.addEventListener("animationend", () => {
+    elem.remove();
+  });
+}
+document.addEventListener("mousemove", createSmoke);
 
 // let disabledKeys = ['c', 'C', 'I', 'J', 'v', 'u', 'x', 'insert'];
 // document.addEventListener('keydown', (e) => {

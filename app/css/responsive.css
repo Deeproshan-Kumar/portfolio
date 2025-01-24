@@ -1,4 +1,12 @@
 @media only screen and (max-width: 1200px) {
+  .navbar .navigation {
+    gap: 3rem;
+  }
+
+  .services .card h2 {
+    font-size: 5.2rem;
+  }
+
   .grid-4x4 {
     grid-template-columns: repeat(4, 10rem);
     grid-gap: 1.5rem;
@@ -7,11 +15,19 @@
   .grid-4x4 .item {
     height: 10rem;
   }
+
+  .contact-form .fields {
+    margin-bottom: 3rem;
+  }
 }
 
 @media only screen and (max-width: 1024px) {
-  .navbar .navigation li:not(:last-child) {
-    margin-right: 3rem;
+  .navbar .navigation {
+    gap: 2rem;
+  }
+
+  .services .card h2 {
+    font-size: 4.2rem;
   }
 
   .grid-4x4 {
@@ -26,6 +42,10 @@
 }
 
 @media only screen and (max-width: 991px) {
+  .app {
+    padding-top: 8rem;
+  }
+
   .spacer.lg {
     min-height: 5rem;
   }
@@ -34,12 +54,16 @@
     height: 8rem;
   }
 
-  .navbar .brand {
-    padding: 0.7rem;
+  .navbar .brand a {
+    font-size: 0;
   }
 
-  .navbar .brand h1 {
-    font-size: 2.4rem;
+  .navbar .navigation {
+    gap: 1.5rem;
+  }
+
+  .hero-section {
+    min-height: calc(100vh - 8rem);
   }
 
   .hero-section .legend h2 {
@@ -54,56 +78,55 @@
     height: 7rem;
     font-size: 2.4rem;
   }
+
+  .contact-form .fields {
+    margin-bottom: 2rem;
+  }
 }
 
 @media only screen and (max-width: 767px) {
+  .app {
+    padding-top: 6rem;
+  }
+
   .hamburger {
     display: block;
   }
 
   .navbar {
-    height: 7rem;
-    padding-right: 5rem;
+    height: 6rem;
+    padding-right: 4rem;
   }
 
-  .navbar .brand {
-    padding: 0 1rem;
+  .navbar .brand a {
+    font-size: 2rem;
   }
 
   .navbar .navigation {
     position: fixed;
-    top: 0;
+    top: -1rem;
     flex-direction: column;
-    left: 0;
-    min-height: 100vh;
-    width: 100%;
-    background-image: linear-gradient(
-      135deg,
-      var(--primary),
-      var(--gradient-one),
-      var(--gradient-two),
-      var(--gradient-one)
-    );
-    background-size: 300% 100%;
+    align-items: flex-start;
+    right: 0;
+    min-width: 20rem;
+    width: auto;
+    padding: 1.5rem;
+    background: var(--glass);
+    border-radius: 1.5rem;
     transform: translateY(-100%);
-    transform-origin: bottom;
+    transform-origin: top;
     transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
     transition-duration: 500ms;
     z-index: 998;
   }
 
   .navbar .navigation.active {
+    top: 5rem;
     transform: translateY(0);
   }
 
-  .navbar .navigation li:not(:last-child) {
-    margin-right: 0;
-    margin-bottom: 2rem;
-  }
-
   .navbar .navigation li a {
-    font-size: 1.6rem;
-    color: var(--light);
+    font-size: 1.4rem;
   }
 
   .navbar .navigation li.active::before,
@@ -111,8 +134,8 @@
     transform: scaleX(0);
   }
 
-  li.light-mode {
-    right: 5rem;
+  .hero-section {
+    min-height: calc(100vh - 6rem);
   }
 
   .hero-section .legend {
@@ -151,9 +174,13 @@
     font-size: 1.6rem;
   }
 
+  .about .grid-1x2 {
+    grid-template-columns: 1fr;
+  }
+
   .edu-and-exp h4 {
     font-size: 1.6rem;
-  } 
+  }
 
   .edu-and-exp .block {
     padding-left: 2.5rem;
@@ -163,12 +190,25 @@
     padding: 1.5rem;
   }
 
+  .grid-1x3 {
+    grid-gap: 1rem;
+  }
+
+  .projects .grid {
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+  }
+
   .contact-form .field {
     margin-bottom: 1.5rem;
   }
 
   .services .card .inner {
     padding: 2rem;
+  }
+
+  .contact-form .fields {
+    margin-bottom: 1rem;
   }
 
   .contact-info {
@@ -185,6 +225,10 @@
 
   .footer a {
     justify-content: center;
+  }
+
+  .footer .footer-inner {
+    flex-wrap: wrap;
   }
 
   .footer .footer-inner .panel {
