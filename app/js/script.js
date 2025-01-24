@@ -163,26 +163,26 @@ function createSmoke(e) {
 }
 document.addEventListener("mousemove", createSmoke);
 
-// let disabledKeys = ['c', 'C', 'I', 'J', 'v', 'u', 'x', 'insert'];
-// document.addEventListener('keydown', (e) => {
-//   if (
-//     (e.ctrlKey && disabledKeys.includes(e.key)) ||
-//     (e.shiftKey && disabledKeys.includes(e.key)) ||
-//     (e.ctrlKey && e.shiftKey && disabledKeys.includes(e.key)) ||
-//     e.key === 'F12'
-//   ) {
-//     blockedAction(e);
-//   }
-// });
+let disabledKeys = ['c', 'C', 'I', 'J', 'v', 'u', 'x', 'insert'];
+document.addEventListener('keydown', (e) => {
+  if (
+    (e.ctrlKey && disabledKeys.includes(e.key)) ||
+    (e.shiftKey && disabledKeys.includes(e.key)) ||
+    (e.ctrlKey && e.shiftKey && disabledKeys.includes(e.key)) ||
+    e.key === 'F12'
+  ) {
+    blockedAction(e);
+  }
+});
 
-// document.addEventListener('paste', (e) => {
-//   blockedAction(e);
-// });
+document.addEventListener('paste', (e) => {
+  blockedAction(e);
+});
 
-// document.addEventListener('copy', (e) => {
-//   blockedAction(e);
-// });
+document.addEventListener('copy', (e) => {
+  blockedAction(e);
+});
 
-// document.addEventListener('contextmenu', (e) => {
-//   blockedAction(e);
-// });
+document.addEventListener('contextmenu', (e) => {
+  blockedAction(e);
+});
