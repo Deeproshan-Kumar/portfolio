@@ -599,20 +599,6 @@ span.highlights {
   border-radius: 1.5rem;
 }
 
-.projects .inner .card::after {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  height: 10rem;
-  width: 10rem;
-  border-radius: 50%;
-  background: #2e2e38;
-  filter: blur(5rem);
-  z-index: 1;
-}
-
 .projects .inner .card .card-img,
 .projects .inner .card .card-body {
   position: relative;
@@ -1054,6 +1040,7 @@ textarea:valid ~ label {
   );
   pointer-events: none;
   animation: ripple 1s ease-out forwards;
+  z-index: 1000;
 }
 
 @keyframes ripple {
