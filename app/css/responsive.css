@@ -274,7 +274,12 @@
     margin-bottom: 0.5rem;
   }
 
-  .grid-1x2,
+  .grid-1x2 {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media only screen and (max-width: 375px) {
   .projects .grid {
     grid-template-columns: 1fr;
   }
