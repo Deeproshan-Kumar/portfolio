@@ -15,10 +15,6 @@
   .grid-4x4 .item {
     height: 10rem;
   }
-
-  .contact-form .fields {
-    margin-bottom: 3rem;
-  }
 }
 
 @media only screen and (max-width: 1024px) {
@@ -43,7 +39,7 @@
 
 @media only screen and (max-width: 991px) {
   html {
-    scroll-padding: 8rem;
+    scroll-padding: 9rem;
   }
 
   .app {
@@ -90,7 +86,7 @@
 
 @media only screen and (max-width: 767px) {
   html {
-    scroll-padding: 6rem;
+    scroll-padding: 7rem;
   }
 
   body {
@@ -215,14 +211,6 @@
     grid-gap: 1rem;
   }
 
-  .contact-form .field {
-    margin-bottom: 1.5rem;
-  }
-
-  .contact-form .fields {
-    margin-bottom: 1rem;
-  }
-
   .contact-info {
     margin-top: 2rem;
   }
@@ -276,6 +264,11 @@
 
   .grid-1x2 {
     grid-template-columns: 1fr;
+  }
+
+  .contact-img img,
+  .contact-form .panel.right {
+    border-radius: 0;
   }
 }
 
