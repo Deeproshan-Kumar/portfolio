@@ -620,7 +620,7 @@ span.highlights {
 }
 
 .projects .inner .card .card-img {
-  padding: 1rem;
+  padding: 1.5rem;
   padding-bottom: 0;
 }
 
@@ -642,11 +642,7 @@ span.highlights {
 
 .projects .tags span {
   display: inline-block;
-  background: linear-gradient(
-    45deg,
-    var(--primary),
-    var(--gradient-one)
-  );
+  background: linear-gradient(45deg, var(--primary), var(--gradient-one));
   font-size: 1.2rem;
   padding: 0.4em 0.8rem;
   border-radius: 0.5rem;
@@ -736,7 +732,6 @@ textarea:valid ~ label {
 .contact-form .submit {
   border: none;
   outline: none;
-  font-size: 1.6rem;
   cursor: pointer;
 }
 
@@ -833,13 +828,18 @@ textarea:valid ~ label {
 
 .contact-info .card a {
   color: var(--text-light);
+  transition: 300ms all ease-in-out;
+}
+
+.contact-info .card a:hover {
+  color: var(--light);
 }
 
 /* Footer */
 .footer {
   position: relative;
   background: var(--glass);
-  color: var(--light);
+  color: var(--text-light);
   padding: var(--section-pd);
 }
 
@@ -869,10 +869,15 @@ textarea:valid ~ label {
 }
 
 .footer a {
-  color: var(--light);
+  color: var(--text-light);
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  transition: 300ms all ease-in-out;
+}
+
+.footer a:hover {
+  color: var(--light);
 }
 
 .footer .branding .brand {
