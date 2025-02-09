@@ -45,6 +45,7 @@ var typed = new Typed("#element", {
     "Software Development Engineer",
     "Front End Developer",
     "React JS Developer",
+    "Next JS Developer",
   ],
   typeSpeed: 100,
   loop: true,
